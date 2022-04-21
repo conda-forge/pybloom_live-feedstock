@@ -1,5 +1,5 @@
 {% set name = "pybloom_live" %}
-{% set version = "3.0.0" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 837550da7c82adb14b901c56c3e131ad269250cd19850a53671e878bd0626c68
+  sha256: d0974d586ec76b58ed218b8b791ea0e71f30e2080437431f7992ae3732a54e4a
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - bitarray >=0.3.4
 
 test:
@@ -31,7 +31,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Scalable Bloom Filter implemented in Python'
+  summary: Scalable Bloom Filter implemented in Python
 
 extra:
   recipe-maintainers:
