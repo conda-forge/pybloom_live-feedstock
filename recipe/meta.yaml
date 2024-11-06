@@ -1,5 +1,5 @@
 {% set name = "pybloom_live" %}
-{% set version = "3.1.0" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d0974d586ec76b58ed218b8b791ea0e71f30e2080437431f7992ae3732a54e4a
+  sha256: 99545c5d3b05bd388b5491e36b823b706830a686ba18b4c19063d08de5321110
 
 build:
   number: 0
